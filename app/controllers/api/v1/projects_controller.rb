@@ -1,4 +1,4 @@
-class Api::ProjectsController < ApplicationController
+class Api::V1::ProjectsController < ApplicationController
 	# index
 	def index
 		# users_projects = Project.select { |proj| proj.user == current_user}

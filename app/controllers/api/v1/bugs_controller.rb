@@ -1,4 +1,4 @@
-class Api::BugsController < ApplicationController
+class Api::V1::BugsController < ApplicationController
 	# Create
 	def create 
 		bug = Bug.new(bug_params)
