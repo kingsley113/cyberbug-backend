@@ -7,7 +7,7 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins 'http://localhost:3000'
+    origins 'https://react-cyberbug.herokuapp.com'
 		# TODO: Update this to correct origin before hosting!!!
 
     resource '*',
