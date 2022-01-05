@@ -35010,3 +35010,19 @@ Filter chain halted as :authorized rendered or redirected
 Completed 401 Unauthorized in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 555)
 
 
+Started GET "/" for 127.0.0.1 at 2022-01-05 13:00:08 -0800
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+Completed 204 No Content in 3ms (ActiveRecord: 0.0ms | Allocations: 2213)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 13:00:21 -0800
+Processing by WelcomeController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 40)
+
+
+Started GET "/" for 127.0.0.1 at 2022-01-05 13:01:11 -0800
+Processing by WelcomeController#index as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 224)
+
+
