@@ -2,7 +2,11 @@ class ApplicationController < ActionController::API
 	before_action :authorized
 
 	def encode_token(payload)
-		JWT.encode(payload, ENV["JWT_TOKEN_SECRET"])
+		# JWT.encode(payload, ENV["JWT_TOKEN_SECRET"])
+		
+		JWT.encode(payload, "squish_all_of_the_bugs!")
+				# TODO: This is just for debugging!!! I swear to god if you leave this in here for production...
+
 	end
 
 	def auth_header
@@ -13,7 +17,9 @@ class ApplicationController < ActionController::API
 		if auth_header
 			token = auth_header.split(' ')[1]
 			begin
-				JWT.decode(token, ENV["JWT_TOKEN_SECRET"], true, algorithm: 'HS256')
+				# JWT.decode(token, ENV["JWT_TOKEN_SECRET"], true, algorithm: 'HS256')
+				JWT.decode(token, "squish_all_of_the_bugs!", true, algorithm: 'HS256')
+				# TODO: This is just for debugging!!! I swear to god if you leave this in here for production...
 			rescue JWT::DecodeError
 				nil
 			end
